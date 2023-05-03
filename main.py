@@ -61,7 +61,6 @@ async def process_library_command(message: types.Message):
         "dbname=postgres user=postgres host='localhost' password = 'postgres'"
     ) as aconn:
         async with aconn.cursor() as acur:
-            # pass  # write all values to db here
 
             await acur.execute(
                 f"""select *
